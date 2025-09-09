@@ -2,7 +2,45 @@
 Declare an array named tea flavours that contains: green tea, black tea, oolong tea, spearmint tea
 */
 
-let teaFlavours = ['black tea','green tea', 'black tea', 'oolong tea'];
+// .Arrays when copied to another variables, shallow copy is created 
+// i.e. both variables point to the same array in memory
+// To create a hard copy, use spread operator or slice method
+
+let arr1 = [1,2,3];
+console.log("Original: ",arr1);
+
+let arr2 = arr1; // neither a shallow copy nor a deep copy, just another reference to the same array
+let shallowAr = [...arr1]; // shallow copy using spread operator
+let shallowAr2 = arr1.slice(); // shallow copy using slice method
+
+// push, pop, shift, unshift, splice, slice, indexOf, includes, concat
+// push - adds element at the end of array
+// pop - removes element from the end of array
+// shift - removes element from the beginning of array
+// unshift - adds element at the beginning of array
+// splice - adds/removes elements in the middle of array
+// slice - creates a shallow copy of array
+// indexOf - returns the index of the element in the array
+// includes - returns true if the element is present in the array, else false
+// concat - merges two arrays
+console.log("***************************************************************************")
+
+
+console.log("Diff between splice and slice");
+
+let A = [1,2,3,4,5,6,7,8];
+let sliced = A.slice(2,4);
+console.log("A: ",A)
+console.log("Sliced: ",sliced);
+// creates a shallow copy from index 2 to 4 (4 not included)
+
+let B = A.splice(2,4); // removes 2 elements from index 2
+console.log("B: ",B); // returns the removed elements
+console.log("A after splice by B: ",A); // original array is modified
+
+
+console.log("***************************************************************************")
+let teaFlavours = ['black tea','green tea', 'black tea', 'oolong tea']; 
 let teaFlavours2 = new Array('black tea','green tea', 'black tea', 'oolong tea');
 
 /**

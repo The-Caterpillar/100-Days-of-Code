@@ -14,10 +14,9 @@ let newGreet = `Hello ${s2}!!`; // Say hello to String interpolation
 console.log(oldGreet);
 console.log(newGreet);
 
-// We can do anyu operations inside the strings using ${}
+// We can do any operations inside the strings using ${}
 let calC = `New calculation = ${1 + 1 + 90 * 710 / 71}`;
 console.log(calC);
-
 
 /////////////// SYMBOL ///////////////
 let rem = Symbol("Saras");
