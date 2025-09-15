@@ -24,3 +24,21 @@ document.getElementById('feedbackForm').addEventListener('submit', function(even
     document.getElementById('feedbackDisplay').style.marginTop = "10px";
     document.getElementById('feedbackForm').reset();
 });
+
+// Example 9:
+document.addEventListener('DOMContentLoaded', function(){
+    document.getElementById('domStatus').textContent = "DOM is fully loaded and parsed";
+});
+
+// Example 10:
+document.getElementById('toggleHighlight').addEventListener('click', function() {
+    let descriptionText = document.getElementById('descriptionText');
+    descriptionText.classList.toggle('highlight');
+
+    // Let's also change the button text based on the state
+    if (descriptionText.classList.contains('highlight')) {
+        this.textContent = "Remove Highlight!";
+    } else {
+        this.textContent = "Add Highlight!";
+    }
+});
