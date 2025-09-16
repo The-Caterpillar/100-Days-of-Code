@@ -49,4 +49,19 @@ async function fetchData() {
     }
 }
 
-fetchData();
+// fetchData();
+
+
+async function trialFn() {
+    try{
+        let trialData = await new Promise((resolve,reject)=>{
+            // resolve("Trial data fetched successfully");
+            reject("Data couldn't be fetched")
+        })
+        console.log(trialData);
+    }
+    catch(error){
+        console.log(error);
+    }
+}
+trialFn();
