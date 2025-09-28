@@ -1,0 +1,199 @@
+/* styles.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #121212;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  width: 400px;
+  padding: 20px;
+  background-color: #1e1e1e;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+h1,
+h2 {
+  margin-bottom: 20px;
+}
+
+#product-list {
+  margin-bottom: 30px;
+}
+
+.product {
+  background-color: #333333;
+  padding: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.product button {
+  background-color: #6200ea;
+  border: none;
+  padding: 5px 10px;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.product button:hover {
+  background-color: #3700b3;
+}
+
+#cart-items {
+  margin-bottom: 20px;
+}
+
+#cart-total {
+  text-align: right;
+}
+
+#checkout-btn {
+  background-color: #6200ea;
+  border: none;
+  padding: 10px;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#checkout-btn:hover {
+  background-color: #3700b3;
+}
+
+.hidden {
+  display: none;
+}
+
+
+/*
+
+document.addEventListener('DOMContentLoaded', ()=>{
+    const products = [
+        {id: 1, name: "Tata chai", price: 120},
+        {id: 2, name: "Tata sampann besan", price: 250},
+        {id: 3, name: "Fortune Rice Bran Oil", price: 170},
+        {id: 4, name: "Amul whole milk", price: 55},
+        {id: 5, name: "Apples", price: 40},
+        {id: 6, name: "Mother Dairy Dahi", price: 30},
+    ];
+    let cart = []; // Our cart is empty initially
+
+    const product_list = document.getElementById('product-list');
+    const cart_Items = document.getElementById('cart-items');
+    const emptyCartMsg = document.getElementById('empty-cart')
+    const cart_total = document.getElementById('cart-total');
+    const total_price = document.getElementById('total-price');
+    const checkout_btn = document.getElementById('checkout-btn');
+    let bill = 0;
+
+    checkout_btn.addEventListener('click', ()=>{})
+
+    products.forEach(product => {
+        const productDiv = document.createElement('div');
+        productDiv.classList.add('product');
+        productDiv.innerHTML =
+        `<span>${product.name} - ${product.price}</span>
+        <button data-id="${product.id}">Add to cart</button>`;
+
+        product_list.appendChild(productDiv);
+    });
+
+    product_list.addEventListener('click', (e)=>{
+        // tagName is a property of an HTML element that returns the tag name as an uppercase string,
+        // like "DIV", "BUTTON", "SPAN", etc.
+        if(e.target.tagName === "BUTTON")
+        {
+            // console.log("Button clicked hehehe");
+            const productID = parseInt(e.target.getAttribute('data-id'));
+            const prod = products.find(p => p.id === productID);
+            addToCart(prod);
+        }
+    });
+
+    function addToCart(prod)
+    {
+        cart.push(prod);
+        console.log('\ncart items=: ',cart);
+        renderCart(cart)
+    }
+
+    function renderCart(cart_List){
+            bill = 0;
+            let count = 0;
+            let cartContent = "";
+        if (cart.length === 0)
+        {
+            cart_total.classList.add('hidden');
+            cart_Items.innerHTML = '<div>Your cart is empty</div>';
+            return;
+        }
+        else{
+            cart_Items.innerText = "";
+            // displaying the cart :
+            let cartView =
+            cart.forEach(product => {
+                count+=1;
+                cartContent +=
+                `<span> ${count}. ${product.name} = ${product.price} </span>
+                <button cartItem-id="${count}> Remove </button>`;
+                bill = bill + product.price;
+            });
+            // Displaying cart:
+            cart_Items.innerHTML = cartContent; 
+            // Displaying cart bill:
+            cart_total.classList.remove('hidden');
+            total_price.innerHTML = `$${bill}`;
+        }
+    }
+    // product_list.addEventListener('click', (e)=>{
+    //     // tagName is a property of an HTML element that returns the tag name as an uppercase string,
+    //     // like "DIV", "BUTTON", "SPAN", etc.
+    //     if(e.target.tagName === "BUTTON")
+    //     {
+    //         // console.log("Button clicked hehehe");
+    //         const productID = parseInt(e.target.getAttribute('data-id'));
+    //         const prod = products.find(p => p.id === productID);
+    //         addToCart(prod);
+    //     }
+    // });
+    // cart_Items.addEventListener('click',(e)=>{
+    //     if(e.target.targetName === "BUTTON")
+    //     {
+    //         const cartItemID = parseInt(e.target.getAttribute('cartItem-id'));
+    //         const cartProd = cart_Items.find(p => p.count === cartItemID);
+    //         removeFromCart(cartProd);
+    //     }
+    // })
+    // function removeFromCart(cartProd)
+    // {
+
+    // }
+
+    // checkout button
+    checkout_btn.addEventListener('click',()=>{
+        alert('Checkout successful!! We have received your order ^_^');
+        cart.length = 0;
+        renderCart();
+    })
+
+})
+
+*/
