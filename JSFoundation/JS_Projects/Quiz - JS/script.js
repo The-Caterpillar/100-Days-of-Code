@@ -13,36 +13,36 @@ document.addEventListener("DOMContentLoaded", () => {
   let calScore = 0;
 
   startButton.addEventListener("click", () => {
-    console.log("start clicked :-P");
+    // console.log("start clicked :-P");
     startButton.classList.add("hidden");
     renderQuestion();
   });
 
   choicesList.addEventListener("click", (event) => {
-    console.log("Some option is clicked");
+    // console.log("Some option is clicked");
     if (event.target.tagName === "LI") {
-      console.log("It's LI");
+    //   console.log("It's LI");
       const response = event.target.innerText;
-      console.log(response);
-      console.log(questions[currentQuestion].answer);
+    //   console.log(response);
+    //   console.log(questions[currentQuestion].answer);
       if (response === questions[currentQuestion].answer) {
         calScore++;
       }
     }
-    console.log(calScore);
+    // console.log(calScore);
   });
 
   nextButton.addEventListener("click", () => {
-    console.log("next button clicked");
+    // console.log("next button clicked");
     currentQuestion++;
     renderQuestion();
   });
 
   function renderQuestion() {
-    console.log("render method called");
-    console.log("currentQuestion", currentQuestion);
+    // console.log("render method called");
+    // console.log("currentQuestion", currentQuestion);
     if (currentQuestion < 10) {
-      console.log("question number: ", currentQuestion);
+    //   console.log("question number: ", currentQuestion);
       nextButton.classList.remove("hidden");
       resultContainer.classList.add("hidden");
       questionContainer.classList.remove("hidden");
@@ -55,10 +55,10 @@ document.addEventListener("DOMContentLoaded", () => {
         choicesList.appendChild(li);
       });
     } else {
-      console.log("I'm called hehehe");
+    //   console.log("I'm called hehehe");
       renderResult();
     }
-    console.log("nahi hua");
+    // console.log("nahi hua");
   }
 
   function renderResult() {
@@ -69,10 +69,10 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   restartButton.addEventListener("click", () => {
-    console.log("restart button clicked");
+    // console.log("restart button clicked");
     currentQuestion = 0;
     calScore = 0;
-    console.log(currentQuestion, calScore);
+    // console.log(currentQuestion, calScore);
     renderQuestion();
   });
 
